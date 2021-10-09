@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Google Books APP
 
-## Getting Started
+This is an application to show books that exist in the [Google Books' API](https://developers.google.com/books/docs/v1/using).
 
-First, run the development server:
+The design was based on:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<img width="581" alt="Screen Shot 2021-04-13 at 10 19 47" src="https://user-images.githubusercontent.com/13947203/114559257-eb55ad00-9c41-11eb-9617-4e7627cc373e.png">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**NOTE:** The design was created by [Foton Tech](https://github.com/FotonTech).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Requirements
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+The website design has 3 screens, which are:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Home
 
-## Learn More
+1. Create a Pixel Perfect screen based on design above;
+2. The books must be clickable and redirect to **details** screen.
 
-To learn more about Next.js, take a look at the following resources:
+### Search
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+In this screen the functionalities below are **mandatory**:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. See a list of books based on search query;
+2. Make it possible to search for more books with a "Load more" button;
+3. Search books by name;
+4. Click on one of the books to see their details.
 
-## Deploy on Vercel
+### Books details
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+In this screen the functionalities below are **mandatory**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. See all information for the selected book.
