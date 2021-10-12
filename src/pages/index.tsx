@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import type { NextPage } from 'next'
 import Head from 'next/head'
 import api from '@/services/api'
 
@@ -11,19 +9,21 @@ import {
   GBBookNav,
 } from '@/components'
 
-const Home: NextPage = () => {
-  let abc = 0;
+export async function getServerSideProps() {
+  const fetchBooksDiscover = async () => {
+    const booksDiscover = await api.get('/volumes?q=rand');
+    return booksDiscover?.data;
+  };
+  const booksDiscover = await fetchBooksDiscover();
+  return {
+    props: {
+      booksDiscover: booksDiscover,
+    }
+  }
+}
 
-  useEffect(() => {
-    async function tre() {
-      await api.get('/volumes?q=rand')
-      .then((response: any) => {
-        abc = (response?.data?.items.slice(1, 4));
-        console.log(abc);
-      })
-    };
-  }, [])
-
+function Home(props: any) {
+  console.log("teste", props.booksDiscover.items.slice(1, 4));
   return (
     <>
       <Head>
@@ -34,8 +34,12 @@ const Home: NextPage = () => {
         <GBTextSearch />
         <GBLabelUser />
         <GBBottomNavBar bottomFixed />
-        <GBBookNav title="Reviews of The Days" link="All Video" />
-        <GBBookNav title="Reviews of The Days" link="All Video" />
+        <GBBookNav
+          title="Discover new book"
+          link="More"
+          books={props.booksDiscover.items.slice(1, 4)}
+        />
+        <GBBookNav title="Currently Reading" link="All" />
         <GBBookNav title="Reviews of The Days" link="All Video" />
       </GBBackground>
     </>
