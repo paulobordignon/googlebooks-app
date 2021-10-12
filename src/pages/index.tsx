@@ -39,7 +39,11 @@ function Home(props: any) {
           link="More"
           books={props.booksDiscover.items.slice(1, 4)}
         />
-        <GBBookNav title="Currently Reading" link="All" />
+        <GBBookNav
+          title="Currently Reading"
+          link="All"
+          books={props.booksDiscover.items.slice(5, 7)}
+        />
         <GBBookNav title="Reviews of The Days" link="All Video" />
       </GBBackground>
     </>
