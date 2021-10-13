@@ -12,12 +12,7 @@ export const GBBookNavDiscoverItem: React.FC<GBBookNavItemProps> = memo(
       <li className="mr-3">
         {title === "Discover new book" &&
           <div className="overflow-hidden relative cursor-pointer rounded-lg" style={{ width: 272, height: 139}}>
-            <Link
-              href={{
-                pathname: `/books/`,
-                query: {},
-              }}
-            >
+            <Link href={{ pathname: `/books/${item?.id}`}}>
               <a>
                 <Image
                   src={discoverBook}
@@ -41,12 +36,7 @@ export const GBBookNavDiscoverItem: React.FC<GBBookNavItemProps> = memo(
         }
         {title === "Currently Reading" &&
           <div className="overflow-hidden relative cursor-pointer rounded-lg flex items-center" style={{ width: 331, height: 136 }}>
-           <Link
-             href={{
-               pathname: `/books/`,
-               query: {},
-             }}
-           >
+           <Link href={{ pathname: `/books/${item?.id}`}}>
              <a>
                 <Image
                   src={currentlyReading}

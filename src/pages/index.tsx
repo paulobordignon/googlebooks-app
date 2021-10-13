@@ -23,7 +23,6 @@ export async function getServerSideProps() {
 }
 
 function Home(props: any) {
-  console.log("teste", props.booksDiscover.items.slice(1, 4));
   return (
     <>
       <Head>
@@ -33,7 +32,6 @@ function Home(props: any) {
       <GBBackground>
         <GBTextSearch />
         <GBLabelUser />
-        <GBBottomNavBar bottomFixed />
         <GBBookNav
           title="Discover new book"
           link="More"
@@ -45,6 +43,7 @@ function Home(props: any) {
           books={props.booksDiscover.items.slice(5, 7)}
         />
         <GBBookNav title="Reviews of The Days" link="All Video" />
+        <GBBottomNavBar bottomFixed />
       </GBBackground>
     </>
   )
