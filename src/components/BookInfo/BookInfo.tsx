@@ -15,7 +15,7 @@ export const GBBookInfo: React.FC<GBBookInfoProps> = memo(
             className="h-1/3"
             src={bookInfoBackground}
           />
-          <div className="absolute top-10 ml-5 z-99999">
+          <div className="absolute top-10 ml-5 z-99999 cursor-pointer">
             <a onClick={() => router.back()}>
               <i className="far fa-arrow-left text-lg"></i>
             </a>
@@ -38,7 +38,6 @@ export const GBBookInfo: React.FC<GBBookInfoProps> = memo(
           <span className="text-sm text-gray-600">
             {item?.volumeInfo?.description ? item?.volumeInfo?.description : "This book has no description."}
           </span>
-          {console.log(item)}
         </div>
       </>
     );

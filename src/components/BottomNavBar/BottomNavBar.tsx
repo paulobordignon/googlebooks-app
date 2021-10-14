@@ -7,7 +7,7 @@ export const GBBottomNavBar: React.FC<GBBottomNavBarProps> = memo(({ bottomFixed
       <div className="px-7 bg-white shadow-lg">
         <div className="flex">
           <div className="flex-1 group">
-            <a href="#" className="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-gray-800">
+            <a href="/" className="flex items-end justify-center text-center mx-auto px-4 pt-2 w-full text-gray-400 group-hover:text-gray-800">
               <span className="block px-1 pt-1 pb-1">
                   <i className="fas fa-home text-2xl pt-1 mb-1 block"></i>
                   <span className="block text-xs pb-2">Home</span>

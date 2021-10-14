@@ -20,7 +20,9 @@ export const GBBookNavDiscoverItem: React.FC<GBBookNavItemProps> = memo(
                   height={139}
                 />
                 <div className="m-2 absolute top-0 left-3 w-full z-99999 text-purple-50 pr-28">
-                  <h1 className="font-bold text-2xl pt-5" style={{maxWidth: "10ch", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap"}}>{item?.volumeInfo?.title}</h1>
+                  <h1 className="font-bold text-2xl pt-5" style={{maxWidth: "10ch", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap"}}>
+                    {item?.volumeInfo?.title}
+                  </h1>
                   <span>{item?.volumeInfo?.authors[0]}</span>
                   <div className="absolute top-2 left-40 w-full z-99999 rounded-lg">
                     <Image
